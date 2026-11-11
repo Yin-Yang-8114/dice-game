@@ -16,7 +16,7 @@ def main():
             case 1:
                 start_game()
             case 2:
-                pass #  View Game History logic goes here
+                display_game_history(load_game_history())
             case 3:
                 pass #  View Statistics logic goes here
             case 4:

@@ -24,8 +24,24 @@ def display_game_results(game):
         print(f"The winner is: {game['winner']}")
 
 
-def display_game_history(history):
-    pass
+def display_game_history(history): # loads from json file and displays the history of games played by name of the player number of rounds player score and cumpouter score and the winer
+    if not history:
+        print("No game history available.")
+        return
+    print("================================")
+    print("          GAME HISTORY")
+    print("================================\n")
+    for index, game in enumerate(history, start=1):
+        print(f"Game {index}:")
+        print(f"Player Name: {game['player_name']}")
+        print(f"Total Rounds: {game['rounds']}")
+        print(f"Player Score: {game['player_score']}")
+        print(f"Computer Score: {game['computer_score']}")
+        if game["winner"] == "Tie":
+            print("The game ended in a tie!")
+        else:
+            print(f"The winner is: {game['winner']}")
+        print("--------------------------------\n")
 
 
 def display_statistics(history):
