@@ -1,6 +1,8 @@
-from display import display_menu
-from validations import validate_input
-from func import user_choice
+from display import *
+from validations import *
+from game_func import *
+from file_handler import *
+
 
 
 
@@ -10,13 +12,13 @@ def main():
     while True:
         display_menu()
         choice = user_choice()
-        match choice:
+        match choice: 
             case 1:
-                pass  # Start New Game logic goes here
+                start_game()
             case 2:
-                pass # View Game History logic goes here
+                pass #  View Game History logic goes here
             case 3:
-                pass # View Statistics logic goes here
+                pass #  View Statistics logic goes here
             case 4:
                 print("Exiting the game. Goodbye!")
                 break
