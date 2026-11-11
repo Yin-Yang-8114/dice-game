@@ -8,7 +8,7 @@ def load_game_history():
         with open("game_history.json", "r") as file:
             return json.load(file)
     except json.JSONDecodeError:
-        raise IOError("Error decoding JSON from game_history.json\nYOUR JSON NOT WORKING IDIOT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+        raise IOError(f"Error decoding JSON from game_history.json\n{"YOUR JSON NOT WORKING IDIOT !"*100000000}")
 
     
 def save_game(game):
