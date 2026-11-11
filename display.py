@@ -31,8 +31,10 @@ def display_game_history(history):
     print("================================")
     print("          GAME HISTORY")
     print("================================\n")
-    for index, game in enumerate(history, start=1):
-        print(f"Game {index}:")
+    count =0 
+    for game in (history):
+        count +=1
+        print(f"Game {count}:")
         print(f"Player Name: {game['player_name']}")
         print(f"Total Rounds: {game['rounds']}")
         print(f"Player Score: {game['player_score']}")
