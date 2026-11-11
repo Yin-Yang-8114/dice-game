@@ -1,6 +1,6 @@
 from display import display_menu
 from validations import validate_input
-
+from func import user_choice
 
 
 
@@ -21,6 +21,8 @@ def main():
                 print("Exiting the game. Goodbye!")
                 break
             case _:
-                print("Invalid choice. Please try again.")
-if name__ == "__main__":
+                print("chose between 1-4 only.")
+
+
+if __name__ == "__main__":
     main()
