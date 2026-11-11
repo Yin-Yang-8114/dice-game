@@ -11,7 +11,17 @@ def display_menu():
 
 
 def display_game_results(game):
-    pass
+    print("================================")
+    print("          GAME RESULTS")
+    print("================================\n")
+    print(f"Player Name: {game['player_name']}")
+    print(f"Total Rounds: {game['rounds']}")
+    print(f"Player Score: {game['player_score']}")
+    print(f"Computer Score: {game['computer_score']}")
+    if game["winner"] == "Tie":
+        print("The game ended in a tie!")
+    else:
+        print(f"The winner is: {game['winner']}")
 
 
 def display_game_history(history):
@@ -31,7 +41,7 @@ def print_round(round_number):
     print(f"\n           ROUND {round_number}\n")
 
 
-def display_round_results(player_name,player_score, computer_score,winner):
+def display_round_results(player_name, player_score, computer_score, winner):
     print("================================")
     print("          ROUND RESULTS")
     print("================================\n")
