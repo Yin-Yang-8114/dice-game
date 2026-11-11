@@ -24,7 +24,7 @@ def display_game_results(game):
         print(f"The winner is: {game['winner']}")
 
 
-def display_game_history(history): # loads from json file and displays the history of games played by name of the player number of rounds player score and cumpouter score and the winer
+def display_game_history(history):
     if not history:
         print("No game history available.")
         return
@@ -45,13 +45,30 @@ def display_game_history(history): # loads from json file and displays the histo
 
 
 def display_statistics(history):
-    pass
+    if not history:
+        print("No game history available.")
+        return
+    total_games = len(history)
+    player_wins = sum(1 for game in history if game["winner"] != "Computer" and game["winner"] != "Tie")
+    computer_wins = sum(1 for game in history if game["winner"] == "Computer")
+    ties = sum(1 for game in history if game["winner"] == "Tie")
+    
+    print("================================")
+    print("          STATISTICS")
+    print("================================\n")
+    print(f"Total Games Played: {total_games}")
+    print(f"Player Wins: {player_wins} ({(player_wins / total_games) * 100:.2f}%)")
+    print(f"Computer Wins: {computer_wins} ({(computer_wins / total_games) * 100:.2f}%)")
+    print(f"Ties: {ties} ({(ties / total_games) * 100:.2f}%)\n")
+
+
 
 def print_new_game(player_name, rounds):
     print("================================")
     print("          NEW GAME")
     print("================================")
     print(f"\n player naem : {player_name} \n number of rounds : {rounds} ")
+
 
 def print_round(round_number):
     print(f"\n           ROUND {round_number}\n")

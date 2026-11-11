@@ -18,7 +18,7 @@ def main():
             case 2:
                 display_game_history(load_game_history())
             case 3:
-                pass #  View Statistics logic goes here
+                display_statistics(load_game_history())
             case 4:
                 print("Exiting the game. Goodbye!")
                 break
